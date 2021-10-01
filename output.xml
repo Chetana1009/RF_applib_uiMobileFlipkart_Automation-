@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1 (Python 3.9.6 on win32)" generated="20211001 23:27:26.523" rpa="false" schemaversion="2">
+<suite id="s1" name="Tests" source="C:\FlipkartAppium\Mobile\Tests">
+<suite id="s1-s1" name="Tc 01" source="C:\FlipkartAppium\Mobile\Tests\tc_01.robot">
+<test id="s1-s1-t1" name="User should be able to search in flipkart application">
+<kw name="Launch the flipkart application">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${flip_srver}</arg>
+<arg>platformName=${proj_name}</arg>
+<arg>platformVersion=${version_device}</arg>
+<arg>deviceName=${name_device}</arg>
+<arg>app=${app_loc}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20211001 23:27:27.574" endtime="20211001 23:27:57.611"/>
+</kw>
+<status status="PASS" starttime="20211001 23:27:27.573" endtime="20211001 23:27:57.619"/>
+</kw>
+<kw name="User verifies screen content">
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>English</arg>
+<arg>timeout=40s</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<msg timestamp="20211001 23:28:40.589" level="INFO">&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;
+&lt;hierarchy index="0" class="hierarchy" rotation="0" width="1080" height="1977"&gt;
+  &lt;android.widget.FrameLayout index="0" package="com.flipkart.android" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,1977]" displayed="true"&gt;
+    &lt;android.widget.LinearLayout index="0" package="com.flipkart.android" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,1977]" displayed="true"&gt;
+      &lt;android.widget.FrameLayout index="0" package="com.flipkart.android" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,171][1080,1977]" displayed="true"&gt;
+        &lt;android.widget.LinearLayout index="0" package="com.flipkart.android" class="android.widget.LinearLayout" text="" resource-id="com.flipkart.android:id/action_bar_root" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,171][1080,1977]" displayed="true"&gt;
+          &lt;android.widget.FrameLayout index="0" package="com.flipkart.android" class="android.widget.FrameLayout" text="" resource-id="android:id/content" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,171][1080,1977]" displayed="true"&gt;
+            &lt;android.widget.FrameLayout index="0" package="com.flipkart.android" class="android.widget.FrameLayout" text="" resource-id="com.flipkart.android:id/activity_container" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,171][1080,1977]" displayed="true"&gt;
+              &lt;android.widget.RelativeLayout index="0" package="com.flipkart.android" class="android.widget.RelativeLayout" text="" resource-id="com.flipkart.android:id/parent_view" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,171][1080,1977]" displayed="true"&gt;
+                &lt;android.widget.ProgressBar index="0" package="com.flipkart.android" class="android.widget.ProgressBar" text="" resource-id="com.flipkart.android:id/recycler_progressbar" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[474,1093][606,1225]" displayed="true" /&gt;
+              &lt;/android.widget.RelativeLayout&gt;
+            &lt;/android.widget.FrameLayout&gt;
+            &lt;android.widget.FrameLayout index="1" package="com.flipkart.android" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="true" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,2016][1080,2148]" displayed="true"&gt;
+              &lt;android.widget.LinearLayout index="0" package="com.flipkart.android" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[33,2016][1047,2148]" displayed="true"&gt;
+                &lt;android.widget.TextView index="0" package="com.flipkart.android" class="android.widget.TextView" text="Something went wrong!" resource-id="com.flipkart.android:id/snackbar_text" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[33,2016][864,2147]" displayed="true" /&gt;
+                &lt;android.widget.Button index="1" package="com.flipkart.android" class="android.widget.Button" text="RETRY" resource-id="com.flipkart.android:id/snackbar_action" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[864,2016][1047,2148]" displayed="true" /&gt;
+              &lt;/android.widget.LinearLayout&gt;
+            &lt;/android.widget.FrameLayout&gt;
+          &lt;/android.widget.FrameLayout&gt;
+        &lt;/android.widget.LinearLayout&gt;
+      &lt;/android.widget.FrameLayout&gt;
+    &lt;/android.widget.LinearLayout&gt;
+    &lt;android.view.View index="1" package="com.flipkart.android" class="android.view.View" text="" resource-id="android:id/statusBarBackground" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,171]" displayed="true" /&gt;
+  &lt;/android.widget.FrameLayout&gt;
+&lt;/hierarchy&gt;</msg>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20211001 23:28:41.939" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-1.png"&gt;&lt;img src="appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211001 23:28:40.594" endtime="20211001 23:28:41.940"/>
+</kw>
+<msg timestamp="20211001 23:28:41.961" level="FAIL">Text 'English' did not appear in 40 seconds</msg>
+<status status="FAIL" starttime="20211001 23:27:57.653" endtime="20211001 23:28:41.962"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>text=English</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="NOT RUN" starttime="20211001 23:28:41.964" endtime="20211001 23:28:41.964"/>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>CONTINUE</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="NOT RUN" starttime="20211001 23:28:41.965" endtime="20211001 23:28:41.966"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=${btn_cont}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20211001 23:28:41.970" endtime="20211001 23:28:41.971"/>
+</kw>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<arg>tc01.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="NOT RUN" starttime="20211001 23:28:41.971" endtime="20211001 23:28:41.972"/>
+</kw>
+<kw name="Log Source" library="AppiumLibrary">
+<doc>Logs and returns the entire html source of the current page or frame.</doc>
+<status status="NOT RUN" starttime="20211001 23:28:41.973" endtime="20211001 23:28:41.974"/>
+</kw>
+<status status="FAIL" starttime="20211001 23:27:57.641" endtime="20211001 23:28:41.979"/>
+</kw>
+<kw name="User is able to click search icon">
+<status status="NOT RUN" starttime="20211001 23:28:41.984" endtime="20211001 23:28:41.985"/>
+</kw>
+<kw name="Scroll until Apple phone is visible">
+<status status="NOT RUN" starttime="20211001 23:28:41.986" endtime="20211001 23:28:41.986"/>
+</kw>
+<tag>01_tc</tag>
+<status status="FAIL" starttime="20211001 23:27:27.570" endtime="20211001 23:28:41.994">Text 'English' did not appear in 40 seconds</status>
+</test>
+<status status="FAIL" starttime="20211001 23:27:26.622" endtime="20211001 23:28:42.013"/>
+</suite>
+<status status="FAIL" starttime="20211001 23:27:26.533" endtime="20211001 23:28:42.033"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">01_tc</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Tc 01">Tests.Tc 01</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
