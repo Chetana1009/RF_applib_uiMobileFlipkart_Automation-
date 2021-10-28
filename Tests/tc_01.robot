@@ -3,7 +3,7 @@ Library  AppiumLibrary
 
 *** Test Cases ***
 User should be able to search in flipkart application
-    [Tags]  01_tc
+    [Tags]  tc_01
     Launch the flipkart application
     User verifies screen content
     #User goes to Electronics tab
