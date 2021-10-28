@@ -8,7 +8,7 @@ User should be able to search in flipkart application
     User verifies screen content
     #User goes to Electronics tab
     User is able to click search icon 
-    Scroll until Apple phone is visible
+    Scroll until mobile is visible
     
     
 *** Keywords ***
